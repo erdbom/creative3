@@ -4,7 +4,16 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+import mock from './mock.js'
+
+let data = {
+  locations: mock,
+  total: 0,
+  itinerary: []
+}
+
 new Vue({
   router,
+  data,
   render: h => h(App)
 }).$mount('#app')
